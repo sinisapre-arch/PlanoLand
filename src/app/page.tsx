@@ -6,7 +6,7 @@ import { SiteHeader, SiteFooter, CookiePanel, PageLayout, ContactForm } from './
 // Assets & Data
 // ============================================================
 const assets = {
-  logo: '/assets/lburo/logo.svg',
+  logo: '/assets/ui/logo.svg',
   hero: '/assets/lburo/hero.webp',
   studio: '/assets/lburo/studio.webp',
   bg3: '/assets/lburo/bg3.webp',
@@ -32,30 +32,32 @@ const featuredProjects = [
 ]
 
 const principles = [
-  'Человек в центре',
-  'Чувство места',
-  'Природная композиция',
-  'Сезонная динамика',
-  'Климатическая устойчивость',
-  'Полный цикл',
+  { title: 'Человек в центре', desc: 'Сад проектируется не вокруг растений, а вокруг состояния человека, который в нём живёт.' },
+  { title: 'Чувство места', desc: 'Каждый сад рождается из климата, рельефа и света конкретной территории — без шаблонов.' },
+  { title: 'Природная композиция', desc: 'Скандинавская палитра растений: долговечность, сдержанность и спокойная гармония.' },
+  { title: 'Сезонная динамика', desc: 'Сад живёт круглый год: цветение сменяется текстурой, зима не менее красива, чем лето.' },
+  { title: 'Климатическая устойчивость', desc: 'Подбор видов для всех климатических зон — от Калининграда до Сочи и Владивостока.' },
+  { title: 'Полный цикл', desc: 'От первой идеи до ухода: проектирование, реализация и сопровождение в одной команде.' },
 ]
 
 const portfolio = [
-  { title: 'FERMA', place: 'Рязанская область, Россия', image: '/assets/lburo/featured/ferma.webp' },
-  { title: 'SYLT', place: 'Тверская область, Россия', image: '/assets/lburo/featured/sylt.webp', label: 'АЛАРОС 2024' },
-  { title: 'MAUER', place: 'Ленинградская область, Россия', image: '/assets/lburo/featured/mauer.webp' },
-  { title: 'FERRUM', place: 'Московская область, Россия', image: '/assets/lburo/featured/ferrum.webp' },
-  { title: 'ЗАМЕДЛЕНИЕ', place: 'Московская область, Россия', image: '/assets/lburo/featured/zamedlenie.webp' },
-  { title: 'HUGEL', place: 'Медное озеро, Ленинградская область', image: '/assets/lburo/featured/hugel.webp' },
+  { title: 'Японская вилла 1905', place: 'Калининград', label: 'IADA', image: '/assets/lburo/portfolio/japanese-villa-1905.webp' },
+  { title: 'SLOWDOWN', place: 'Московская область', label: 'IADA', image: '/assets/lburo/portfolio/slowdown.webp' },
+  { title: 'SYLT', place: 'Тверская область', label: 'ALAROS', image: '/assets/lburo/portfolio/sylt-alaros.webp' },
+  { title: 'FERMA', place: 'Рязанская область', label: 'ЗОЛОТОЙ ДИПЛОМ', image: '/assets/lburo/portfolio/ferma-gold.webp' },
+  { title: 'LEVEL UP', place: 'Московская область', label: '', image: '/assets/lburo/portfolio/level-up.webp' },
+  { title: 'FERRUM', place: 'Московская область', label: 'СЕРЕБРЯНЫЙ ДИПЛОМ', image: '/assets/lburo/portfolio/ferrum-silver.webp' },
+  { title: 'MAUER', place: 'Ленинградская область', label: 'GOLD DIPLOMA', image: '/assets/lburo/portfolio/mauer-gold.webp' },
+  { title: 'HUGEL', place: 'Медное озеро', label: 'IADA', image: '/assets/lburo/portfolio/hugel-iada.webp' },
+  { title: 'Хрустальное', place: 'Курортный район Санкт-Петербурга', label: 'BLT GOLD', image: '/assets/lburo/portfolio/khrustalnoye.webp' },
+  { title: 'HAUS IM WALD', place: 'Московская область', label: '', image: '/assets/lburo/portfolio/haus-im-wald.webp' },
+  { title: 'DUBLDOMOVO', place: 'Снегири, Московская область', label: '', image: '/assets/lburo/portfolio/dubldomovo.webp' },
+  { title: 'Дивный сад', place: 'Солнечное, Санкт-Петербург', label: 'GRAND PRIX', image: '/assets/lburo/portfolio/divny-sad.webp' },
 ]
 
 // ============================================================
 // Components
 // ============================================================
-function Header() {
-  return <SiteHeader activePath="/" />
-}
-
 function Hero() {
   return (
     <section className="hero section" aria-labelledby="hero-heading">
@@ -69,9 +71,11 @@ function Hero() {
         </span>
 
         <h1 id="hero-heading" className="hero-title uppercase">
-          Сад как инвестиция
+          Сад
           <br />
-          в состояние
+          как
+          <br />
+          состояние
         </h1>
 
         <div className="hero-features">
@@ -94,7 +98,7 @@ function Hero() {
 
 function FeaturedProjects() {
   return (
-    <section className="section" aria-labelledby="featured-heading">
+    <section className="section no-scrollbar" aria-labelledby="featured-heading">
       <div className="container">
         <div className="section-header">
           <div>
@@ -112,7 +116,7 @@ function FeaturedProjects() {
       <div className="container">
         <div className="gallery">
           <div className="gallery__track">
-            {featuredProjects.map((p) => (
+            {featuredProjects.map((p, index) => (
               <Link key={p.title} href="/portfolio/" className="gallery__card link">
                 <div className="gallery__cover">
                   <Image src={p.image} alt={p.title} fill sizes="(max-width: 1200px) 80vw, 30vw" />
@@ -197,19 +201,10 @@ function Principles() {
 
           <div className="principles__grid">
             {principles.map((p, i) => (
-              <article key={p} className="principle-card">
+              <article key={p.title} className="principle-card">
                 <span className="principle-card__num">0{i + 1}</span>
-                <h3 className="principle-card__title uppercase">{p}</h3>
-                <p className="principle-card__desc">
-                  {[
-                    'Сад проектируется не вокруг растений, а вокруг состояния человека, который в нём живёт.',
-                    'Каждый сад рождается из климата, рельефа и света конкретной территории — без шаблонов.',
-                    'Скандинавская палитра растений: долговечность, сдержанность и спокойная гармония.',
-                    'Сад живёт круглый год: цветение сменяется текстурой, зима не менее красива, чем лето.',
-                    'Подбор видов для всех климатических зон — от Калининграда до Сочи и Владивостока.',
-                    'От первой идеи до ухода: проектирование, реализация и сопровождение в одной команде.',
-                  ][i]}
-                </p>
+                <h3 className="principle-card__title uppercase">{p.title}</h3>
+                <p className="principle-card__desc">{p.desc}</p>
               </article>
             ))}
           </div>
@@ -236,7 +231,7 @@ function PortfolioGrid() {
       </div>
       <div className="container">
         <div className="portfolio-page__grid">
-          {portfolio.map((p, i) => (
+          {portfolio.map((p) => (
             <Link key={p.title} href="/portfolio/" className="gallery__card link">
               <div className="gallery__cover">
                 <Image src={p.image} alt={p.title} fill sizes="(max-width: 1200px) 100vw, 33vw" />
@@ -308,7 +303,7 @@ function CatalogCta() {
                 </div>
                 <div className="form-callback__item button-wrap">
                   <button
-                    className="button button-sm button-outline-color-2 button-animated animation-shift uppercase link wide wide"
+                    className="button button-sm button-outline-color-fg button-animated animation-shift uppercase link wide wide"
                     type="submit"
                   >
                     Получить консультацию
@@ -325,7 +320,7 @@ function CatalogCta() {
           <div className="section__subitem buttons-wrap">
             <Link
               href="/assets/catalogs/private-gardens-catalog.pdf"
-              className="button button-sm button-outline-color-2 button-animated animation-shift uppercase link button-catalog wide wide"
+              className="button button-sm button-outline-color-fg button-animated animation-shift uppercase link button-catalog wide wide"
               download
             >
               <span className="button__subitem icon-wrap animation-icon-up">
@@ -340,25 +335,10 @@ function CatalogCta() {
   )
 }
 
-function Footer() {
-  return (
-    <SiteFooter />
-  )
-}
-
-function CookieAndChat() {
-  return (
-    <>
-      <CookiePanel />
-      {/* Chat button can be added here if needed */}
-    </>
-  )
-}
-
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <SiteHeader activePath="/" />
       <main>
         <Hero />
         <FeaturedProjects />
@@ -367,8 +347,8 @@ export default function HomePage() {
         <PortfolioGrid />
         <CatalogCta />
       </main>
-      <Footer />
-      <CookieAndChat />
+      <SiteFooter />
+      <CookiePanel />
     </>
   )
 }

@@ -63,7 +63,7 @@ export function SiteHeader({ activePath = '/' }: { activePath?: string }) {
           </Link>
         </div>
       </div>
-      <div className="dilimiter width-100 height-1" style={{ background: 'var(--color-6)' }} />
+      <div className="dilimiter" style={{ background: 'var(--color-border)' }} />
       <div className="container container-down">
         <div className="section__item logo-wrap">
           <Link href="/" className="link header__logo" aria-label="PlanoLand — Главная">
