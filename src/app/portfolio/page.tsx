@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { PageLayout } from '../components/SiteChrome'
+import Image from "next/image";
+import Link from "next/link";
+import { PageLayout } from "../components/SiteChrome";
 
 /**
  * Portfolio index. Each project has a cover (the first image of the folder
@@ -14,19 +14,61 @@ import { PageLayout } from '../components/SiteChrome'
  * label text for the real project names when ready.
  */
 const PROJECTS = [
-  { slug: 'project-01', title: 'Проект 01', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-01.webp', count: 7 },
-  { slug: 'project-02', title: 'Проект 02', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-02.webp', count: 10 },
-  { slug: 'project-03', title: 'Проект 03', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-03.webp', count: 2 },
-  { slug: 'project-04', title: 'Проект 04', sub: 'До и после', cover: '/assets/portfolio/projects/project-04.webp', count: 3 },
-  { slug: 'project-05', title: 'Проект 05', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-05.webp', count: 5 },
-  { slug: 'project-06', title: 'Проект 06', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-06.webp', count: 9 },
-  { slug: 'project-07', title: 'Проект 07', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-07.webp', count: 4 },
-]
+  {
+    slug: "project-01",
+    title: "Проект 01",
+    sub: "Частный сад",
+    cover: "/assets/portfolio/projects/project-01.webp",
+    count: 7,
+  },
+  {
+    slug: "project-02",
+    title: "Проект 02",
+    sub: "Частный сад",
+    cover: "/assets/portfolio/projects/project-02.webp",
+    count: 10,
+  },
+  {
+    slug: "project-03",
+    title: "Проект 03",
+    sub: "Частный сад",
+    cover: "/assets/portfolio/projects/project-03.webp",
+    count: 2,
+  },
+  {
+    slug: "project-04",
+    title: "Проект 04",
+    sub: "До и после",
+    cover: "/assets/portfolio/projects/project-04.webp",
+    count: 3,
+  },
+  {
+    slug: "project-05",
+    title: "Проект 05",
+    sub: "Частный сад",
+    cover: "/assets/portfolio/projects/project-05.webp",
+    count: 5,
+  },
+  {
+    slug: "project-06",
+    title: "Проект 06",
+    sub: "Частный сад",
+    cover: "/assets/portfolio/projects/project-06.webp",
+    count: 9,
+  },
+  {
+    slug: "project-07",
+    title: "Проект 07",
+    sub: "Частный сад",
+    cover: "/assets/portfolio/projects/project-07.webp",
+    count: 4,
+  },
+];
 
 export const metadata = {
-  title: 'Портфолио — PlanoLand',
-  description: 'Портфолио проектов студии ландшафтного дизайна PlanoLand.',
-}
+  title: "Портфолио — PlanoLand",
+  description: "Портфолио проектов студии ландшафтного дизайна PlanoLand.",
+};
 
 export default function PortfolioPage() {
   return (
@@ -36,8 +78,8 @@ export default function PortfolioPage() {
           <span className="page-hero__eyebrow uppercase">Проекты студии</span>
           <h1 className="page-hero__title uppercase">Портфолио</h1>
           <p className="page-hero__desc">
-            Реализованные проекты студии PlanoLand. Нажмите на проект, чтобы увидеть
-            галерею изображений.
+            Реализованные проекты студии PlanoLand. Нажмите на проект, чтобы
+            увидеть галерею изображений.
           </p>
         </div>
       </section>
@@ -46,13 +88,24 @@ export default function PortfolioPage() {
         <div className="container">
           <div className="portfolio-page__grid">
             {PROJECTS.map((p) => (
-              <Link key={p.slug} href={`/portfolio/${p.slug}/`} className="gallery__card link">
+              <Link
+                key={p.slug}
+                href={`/portfolio/${p.slug}/`}
+                className="gallery__card link"
+              >
                 <div className="gallery__cover">
-                  <Image src={p.cover} alt={p.title} fill sizes="(max-width: 1200px) 100vw, 33vw" />
+                  <Image
+                    src={p.cover}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 1200px) 100vw, 33vw"
+                  />
                 </div>
                 <div className="gallery__meta">
                   <span className="gallery__title uppercase">{p.title}</span>
-                  <span className="gallery__subtitle">{p.sub} · {p.count} фото</span>
+                  <span className="gallery__subtitle">
+                    {p.sub} · {p.count} фото
+                  </span>
                 </div>
               </Link>
             ))}
@@ -60,5 +113,5 @@ export default function PortfolioPage() {
         </div>
       </section>
     </PageLayout>
-  )
+  );
 }

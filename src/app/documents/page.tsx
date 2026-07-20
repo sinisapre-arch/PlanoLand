@@ -1,9 +1,9 @@
-import { PageLayout } from '../components/SiteChrome'
+import { PageLayout } from "../components/SiteChrome";
 
 export const metadata = {
-  title: 'Документы — PlanoLand',
-  description: 'Документы и правовая информация PlanoLand.',
-}
+  title: "Документы — PlanoLand",
+  description: "Документы и правовая информация PlanoLand.",
+};
 
 export default function DocumentsPage() {
   return (
@@ -12,8 +12,8 @@ export default function DocumentsPage() {
         <div className="container-narrow">
           <h1>Документы</h1>
           <p>
-            В этом разделе размещены документы и правовая информация, регулирующая деятельность
-            студии PlanoLand.
+            В этом разделе размещены документы и правовая информация,
+            регулирующая деятельность студии PlanoLand.
           </p>
 
           <h2>Реквизиты компании</h2>
@@ -29,22 +29,39 @@ export default function DocumentsPage() {
             <li>Ассоциация ландшафтных архитекторов России (АЛАРОС)</li>
             <li>Союз Архитекторов России</li>
             <li>Саморегулируемая организация (СРО)</li>
-            <li>Лицензия Министерства культуры РФ по проектированию объектов культурного наследия</li>
+            <li>
+              Лицензия Министерства культуры РФ по проектированию объектов
+              культурного наследия
+            </li>
           </ul>
 
           <h2>Правовые документы</h2>
           <ul>
-            <li><a href="/policy/" className="link">Политика обработки персональных данных</a></li>
-            <li><a href="/agree/" className="link">Пользовательское соглашение</a></li>
-            <li><a href="/policy-yandex/" className="link">Согласие на обработку данных Яндекс Метрика</a></li>
+            <li>
+              <a href="/policy/" className="link">
+                Политика обработки персональных данных
+              </a>
+            </li>
+            <li>
+              <a href="/agree/" className="link">
+                Пользовательское соглашение
+              </a>
+            </li>
+            <li>
+              <a href="/policy-yandex/" className="link">
+                Согласие на обработку данных Яндекс Метрика
+              </a>
+            </li>
           </ul>
 
           <p>
-            По вопросам документации обращайтесь на:{' '}
-            <a href="mailto:lb@planoland.ru" className="link">lb@planoland.ru</a>
+            По вопросам документации обращайтесь на:{" "}
+            <a href="mailto:lb@planoland.ru" className="link">
+              lb@planoland.ru
+            </a>
           </p>
         </div>
       </article>
     </PageLayout>
-  )
+  );
 }
