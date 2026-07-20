@@ -38,3 +38,20 @@ Thumbs.db
 
 # build artifacts that should never be committed
 /.next/cache/
+
+# Original (uncompressed) source images. Only the optimized WebP versions
+# in public/assets/ are committed — these masters stay local to avoid
+# bloating the repo and exceeding deploy size limits.
+src/app/portfolio/1/
+src/app/portfolio/2/
+src/app/portfolio/3/
+src/app/portfolio/4/
+src/app/portfolio/5/
+src/app/portfolio/6/
+src/app/portfolio/7/
+src/app/awards/*.png
+src/app/awards/*.jpg
+src/app/awards/*.jpeg
+src/app/team/*.png
+src/app/team/*.jpg
+src/app/team/*.jpeg

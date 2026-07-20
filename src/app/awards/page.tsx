@@ -31,6 +31,30 @@ export default function AwardsPage() {
 
       <section className="section">
         <div className="container">
+          {/* Award certificate images */}
+          <div className="project-gallery" style={{ marginBottom: '4rem' }}>
+            <div className="project-gallery__item">
+              <Image
+                src="/assets/awards/award-01.webp"
+                alt="Награда 1"
+                width={1200}
+                height={1200}
+                sizes="(max-width: 1200px) 100vw, 50vw"
+                className="project-gallery__image"
+              />
+            </div>
+            <div className="project-gallery__item">
+              <Image
+                src="/assets/awards/award-02.webp"
+                alt="Награда 2"
+                width={1200}
+                height={1200}
+                sizes="(max-width: 1200px) 100vw, 50vw"
+                className="project-gallery__image"
+              />
+            </div>
+          </div>
+
           <div className="portfolio-page__grid">
             {AWARDS.map((award) => (
               <article key={`${award.year}-${award.title}`} className="principle-card">

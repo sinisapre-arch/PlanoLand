@@ -1,19 +1,26 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { PageLayout } from '../components/SiteChrome'
 
+/**
+ * Portfolio index. Each project has a cover (the first image of the folder
+ * the user dropped in) plus a gallery of the remaining images, shown on the
+ * project's own detail page at /portfolio/<slug>/.
+ *
+ * Images were compressed from the user's originals (~106MB) to WebP (~13MB
+ * total) so the site stays within Vercel's deployment size limits.
+ *
+ * NOTE: Project titles/locations below are neutral placeholders. Swap the
+ * label text for the real project names when ready.
+ */
 const PROJECTS = [
-  { title: 'Оазис Парк', sub: 'Москва', image: '/assets/portfolio/public-spaces/oazis-park.svg', awards: ['АЛАРОС 2024'] },
-  { title: 'MR Group, ЖК-1', sub: 'Москва', image: '/assets/portfolio/public-spaces/mr-group-gk1.svg', awards: [] },
-  { title: 'Речной парк', sub: 'Санкт-Петербург', image: '/assets/portfolio/public-spaces/river-park.svg', awards: ['Золотая ветвь'] },
-  { title: 'Технопарк', sub: 'Новосибирск', image: '/assets/portfolio/public-spaces/techno-park.svg', awards: [] },
-  { title: 'Школьный двор', sub: 'Казань', image: '/assets/portfolio/public-spaces/school-yard.svg', awards: [] },
-  { title: 'Центральная площадь', sub: 'Калининград', image: '/assets/portfolio/public-spaces/central-square.svg', awards: ['АЛАРОС 2023'] },
-  { title: 'Сад клиники', sub: 'Сочи', image: '/assets/portfolio/public-spaces/hospital-garden.svg', awards: [] },
-  { title: 'Набережная', sub: 'Владивосток', image: '/assets/portfolio/public-spaces/embankment.svg', awards: [] },
-  { title: 'Усадьба Хрустальное', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/crystal-estate.svg', awards: ['Лучший сад года'] },
-  { title: 'Сосновый бор', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/pinewood-garden.svg', awards: [] },
-  { title: 'Вилла у озера', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/lakeside-villa.svg', awards: ['АЛАРОС 2024'] },
-  { title: 'Опушка леса', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/forest-edge.svg', awards: [] },
+  { slug: 'project-01', title: 'Проект 01', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-01.webp', count: 7 },
+  { slug: 'project-02', title: 'Проект 02', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-02.webp', count: 10 },
+  { slug: 'project-03', title: 'Проект 03', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-03.webp', count: 2 },
+  { slug: 'project-04', title: 'Проект 04', sub: 'До и после', cover: '/assets/portfolio/projects/project-04.webp', count: 3 },
+  { slug: 'project-05', title: 'Проект 05', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-05.webp', count: 5 },
+  { slug: 'project-06', title: 'Проект 06', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-06.webp', count: 9 },
+  { slug: 'project-07', title: 'Проект 07', sub: 'Частный сад', cover: '/assets/portfolio/projects/project-07.webp', count: 4 },
 ]
 
 export const metadata = {
@@ -29,9 +36,8 @@ export default function PortfolioPage() {
           <span className="page-hero__eyebrow uppercase">Проекты студии</span>
           <h1 className="page-hero__title uppercase">Портфолио</h1>
           <p className="page-hero__desc">
-            Более 300 реализованных проектов частных садов и общественных пространств по всей России и
-            за её пределами. Каждый проект — индивидуальное решение, созданное под конкретное место,
-            климат и человека.
+            Реализованные проекты студии PlanoLand. Нажмите на проект, чтобы увидеть
+            галерею изображений.
           </p>
         </div>
       </section>
@@ -40,25 +46,15 @@ export default function PortfolioPage() {
         <div className="container">
           <div className="portfolio-page__grid">
             {PROJECTS.map((p) => (
-              <a key={p.title} href="#" className="gallery__card link">
+              <Link key={p.slug} href={`/portfolio/${p.slug}/`} className="gallery__card link">
                 <div className="gallery__cover">
-                  <Image src={p.image} alt={p.title} fill sizes="(max-width: 1200px) 100vw, 33vw" />
+                  <Image src={p.cover} alt={p.title} fill sizes="(max-width: 1200px) 100vw, 33vw" />
                 </div>
                 <div className="gallery__meta">
                   <span className="gallery__title uppercase">{p.title}</span>
-                  <span className="gallery__subtitle">{p.sub}</span>
-                  {p.awards.length > 0 && (
-                    <div className="gallery__awards">
-                      {p.awards.map((a) => (
-                        <span key={a} className="gallery__award-badge uppercase">
-                          <Image src="/assets/ui/icon-award.svg" alt="" width={12} height={12} />
-                          {a}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  <span className="gallery__subtitle">{p.sub} · {p.count} фото</span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

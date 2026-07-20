@@ -1798,6 +1798,37 @@ b, strong { font-weight: 700; }
   line-height: 1.2;
 }
 
+/* ---------- Project detail gallery ---------- */
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .project-gallery { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+.project-gallery__item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-4);
+}
+
+.project-gallery__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-gallery__item:hover .project-gallery__image {
+  transform: scale(1.02);
+}
+
 /* ---------- Telegram contact form ---------- */
 .telegram-form {
   display: flex;

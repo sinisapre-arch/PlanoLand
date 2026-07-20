@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: 'ВАЛЕРИЙ ФЕДОТОВ',
     role: 'ГЛАВНЫЙ ПО БИЗНЕСУ',
-    image: '/assets/team/valery-fedotov.svg',
+    image: '/assets/team/valery-fedotov.webp',
     alt: 'Валерий Федотов',
     bio: [
       'Основатель и руководитель PlanoLand.',
@@ -17,7 +17,7 @@ const teamMembers = [
   {
     name: 'ПЁТР ЛАРИ',
     role: 'ГЛАВНЫЙ ПО САДАМ',
-    image: '/assets/team/petr-lari.svg',
+    image: '/assets/team/petr-lari.webp',
     alt: 'Пётр Лари',
     bio: [
       'Основатель и главный архитектор PlanoLand.',
