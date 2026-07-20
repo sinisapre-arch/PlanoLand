@@ -17,27 +17,20 @@ export default function HomePage() {
     { title: 'Союз Архитекторов', sub: 'Действующий член' },
   ]
 
-  const publicProjects = [
-    { title: 'Оазис Парк', sub: 'Москва', image: '/assets/portfolio/public-spaces/oazis-park.svg', awards: ['АЛАРОС 2024'] },
-    { title: 'MR Group, ЖК-1', sub: 'Москва', image: '/assets/portfolio/public-spaces/mr-group-gk1.svg', awards: [] },
-    { title: 'Речной парк', sub: 'Санкт-Петербург', image: '/assets/portfolio/public-spaces/river-park.svg', awards: ['Золотая ветвь'] },
-    { title: 'Технопарк', sub: 'Новосибирск', image: '/assets/portfolio/public-spaces/techno-park.svg', awards: [] },
-    { title: 'Школьный двор', sub: 'Казань', image: '/assets/portfolio/public-spaces/school-yard.svg', awards: [] },
-    { title: 'Центральная площадь', sub: 'Калининград', image: '/assets/portfolio/public-spaces/central-square.svg', awards: ['АЛАРОС 2023'] },
-    { title: 'Сад клиники', sub: 'Сочи', image: '/assets/portfolio/public-spaces/hospital-garden.svg', awards: [] },
-    { title: 'Набережная', sub: 'Владивосток', image: '/assets/portfolio/public-spaces/embankment.svg', awards: [] },
+  // Portfolio projects from /assets/portfolio/projects/ (7 projects with galleries)
+  const portfolioProjects = [
+    { slug: 'project-01', title: 'Проект 01', sub: 'Частный сад', image: '/assets/portfolio/projects/project-01.webp', awards: [] },
+    { slug: 'project-02', title: 'Проект 02', sub: 'Частный сад', image: '/assets/portfolio/projects/project-02.webp', awards: [] },
+    { slug: 'project-03', title: 'Проект 03', sub: 'Частный сад', image: '/assets/portfolio/projects/project-03.webp', awards: [] },
+    { slug: 'project-04', title: 'Проект 04', sub: 'До и после', image: '/assets/portfolio/projects/project-04.webp', awards: [] },
+    { slug: 'project-05', title: 'Проект 05', sub: 'Частный сад', image: '/assets/portfolio/projects/project-05.webp', awards: [] },
+    { slug: 'project-06', title: 'Проект 06', sub: 'Частный сад', image: '/assets/portfolio/projects/project-06.webp', awards: [] },
+    { slug: 'project-07', title: 'Проект 07', sub: 'Частный сад', image: '/assets/portfolio/projects/project-07.webp', awards: [] },
   ]
 
-  const privateProjects = [
-    { title: 'Усадьба Хрустальное', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/crystal-estate.svg', awards: ['Лучший сад года'] },
-    { title: 'Сосновый бор', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/pinewood-garden.svg', awards: [] },
-    { title: 'Вилла у озера', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/lakeside-villa.svg', awards: ['АЛАРОС 2024'] },
-    { title: 'Опушка леса', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/forest-edge.svg', awards: [] },
-    { title: 'Утренний свет', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/morning-light.svg', awards: [] },
-    { title: 'Скандинавская тишина', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/scandinavian-quiet.svg', awards: ['Серебряная ветвь'] },
-    { title: 'Терраса на холме', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/terrace-hill.svg', awards: [] },
-    { title: 'Северный минимализм', sub: 'Частный сад', image: '/assets/portfolio/private-gardens/northern-minimal.svg', awards: [] },
-  ]
+  // Split for display: first 4 as public spaces, rest as private gardens
+  const publicProjects = portfolioProjects.slice(0, 4)
+  const privateProjects = portfolioProjects.slice(4)
 
   const principles = [
     { num: '01', title: 'Человек в центре', desc: 'Сад проектируется не вокруг растений, а вокруг состояния человека, который в нём живёт.' },

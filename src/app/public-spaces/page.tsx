@@ -1,16 +1,19 @@
 import Image from 'next/image'
 import { PageLayout, ContactForm } from '../components/SiteChrome'
 
-const PROJECTS = [
-  { title: 'Оазис Парк', sub: 'Москва', image: '/assets/portfolio/public-spaces/oazis-park.svg', awards: ['АЛАРОС 2024'] },
-  { title: 'MR Group, ЖК-1', sub: 'Москва', image: '/assets/portfolio/public-spaces/mr-group-gk1.svg', awards: [] },
-  { title: 'Речной парк', sub: 'Санкт-Петербург', image: '/assets/portfolio/public-spaces/river-park.svg', awards: ['Золотая ветвь'] },
-  { title: 'Технопарк', sub: 'Новосибирск', image: '/assets/portfolio/public-spaces/techno-park.svg', awards: [] },
-  { title: 'Школьный двор', sub: 'Казань', image: '/assets/portfolio/public-spaces/school-yard.svg', awards: [] },
-  { title: 'Центральная площадь', sub: 'Калининград', image: '/assets/portfolio/public-spaces/central-square.svg', awards: ['АЛАРОС 2023'] },
-  { title: 'Сад клиники', sub: 'Сочи', image: '/assets/portfolio/public-spaces/hospital-garden.svg', awards: [] },
-  { title: 'Набережная', sub: 'Владивосток', image: '/assets/portfolio/public-spaces/embankment.svg', awards: [] },
-]
+// Portfolio projects from /assets/portfolio/projects/ (7 projects with galleries)
+  const portfolioProjects = [
+    { slug: 'project-01', title: 'Проект 01', sub: 'Частный сад', image: '/assets/portfolio/projects/project-01.webp', awards: [] },
+    { slug: 'project-02', title: 'Проект 02', sub: 'Частный сад', image: '/assets/portfolio/projects/project-02.webp', awards: [] },
+    { slug: 'project-03', title: 'Проект 03', sub: 'Частный сад', image: '/assets/portfolio/projects/project-03.webp', awards: [] },
+    { slug: 'project-04', title: 'Проект 04', sub: 'До и после', image: '/assets/portfolio/projects/project-04.webp', awards: [] },
+    { slug: 'project-05', title: 'Проект 05', sub: 'Частный сад', image: '/assets/portfolio/projects/project-05.webp', awards: [] },
+    { slug: 'project-06', title: 'Проект 06', sub: 'Частный сад', image: '/assets/portfolio/projects/project-06.webp', awards: [] },
+    { slug: 'project-07', title: 'Проект 07', sub: 'Частный сад', image: '/assets/portfolio/projects/project-07.webp', awards: [] },
+  ]
+
+  // First 4 for public spaces page
+  const PROJECTS = portfolioProjects.slice(0, 4)
 
 export const metadata = {
   title: 'Общественные пространства — PlanoLand',
