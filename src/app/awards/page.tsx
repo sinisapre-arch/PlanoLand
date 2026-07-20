@@ -27,22 +27,22 @@ export default function AwardsPage() {
             зарубежных премий в области ландшафтной архитектуры.
           </p>
         </div>
+        <div className="page-hero__image">
+          <Image
+            src="/assets/awards/hero/award-hero.webp"
+            alt="Награда «Лучшая ландшафтная студия 2025»"
+            fill
+            sizes="(max-width: 1200px) 100vw, 50vw"
+            className="page-hero__image-img"
+            priority
+          />
+        </div>
       </section>
 
       <section className="section">
         <div className="container">
           {/* Award certificate images */}
           <div className="project-gallery" style={{ marginBottom: '4rem' }}>
-            <div className="project-gallery__item">
-              <Image
-                src="/assets/awards/award-01.webp"
-                alt="Награда 1"
-                width={1200}
-                height={1200}
-                sizes="(max-width: 1200px) 100vw, 50vw"
-                className="project-gallery__image"
-              />
-            </div>
             <div className="project-gallery__item">
               <Image
                 src="/assets/awards/award-02.webp"
