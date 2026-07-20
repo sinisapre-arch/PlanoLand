@@ -1,0 +1,10 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Скандинавская тишина — private garden placeholder">
+  <rect width="800" height="600" fill="#E8E4E1"/>
+  <rect x="300" y="220" width="200" height="160" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <line x1="300" y1="260" x2="500" y2="260" stroke="#B9B3B3" stroke-width="1.5"/>
+  <line x1="300" y1="300" x2="500" y2="300" stroke="#B9B3B3" stroke-width="1.5"/>
+  <line x1="300" y1="340" x2="500" y2="340" stroke="#B9B3B3" stroke-width="1.5"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#6C6B6B">Скандинавская тишина</text>
+  <text x="400" y="478" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9A9595">Частный сад</text>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#A8A3A0">Replace with: scandinavian-quiet.webp</text>
+</svg>

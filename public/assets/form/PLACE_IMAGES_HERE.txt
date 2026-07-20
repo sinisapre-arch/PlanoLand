@@ -1,0 +1,3 @@
+This file is here so the folder is tracked by git. Place form-related images here (if any are needed in the form section).
+
+Currently no images are required for the form section, but this folder is reserved for future use (e.g., form success illustrations, alternative catalog cover images).

@@ -1,0 +1,9 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Опушка леса — private garden placeholder">
+  <rect width="800" height="600" fill="#E8E4E1"/>
+  <path d="M200 300 L600 300" stroke="#B9B3B3" stroke-width="2"/>
+  <path d="M240 300 L240 240 M320 300 L320 220 M400 300 L400 210 M480 300 L480 220 M560 300 L560 240" stroke="#B9B3B3" stroke-width="1.5"/>
+  <path d="M220 380 L580 380" stroke="#B9B3B3" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#6C6B6B">Опушка леса</text>
+  <text x="400" y="478" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9A9595">Частный сад</text>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#A8A3A0">Replace with: forest-edge.webp</text>
+</svg>

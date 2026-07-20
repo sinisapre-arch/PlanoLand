@@ -1,0 +1,8 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Сосновый бор — private garden placeholder">
+  <rect width="800" height="600" fill="#E8E4E1"/>
+  <path d="M320 360 L320 240 M360 360 L360 220 M400 360 L400 200 M440 360 L440 220 M480 360 L480 240" stroke="#B9B3B3" stroke-width="2"/>
+  <path d="M305 250 L320 230 L335 250 M345 230 L360 210 L375 230 M385 210 L400 190 L415 210 M425 230 L440 210 L455 230 M465 250 L480 230 L495 250" stroke="#B9B3B3" stroke-width="1.5" fill="none"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#6C6B6B">Сосновый бор</text>
+  <text x="400" y="478" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9A9595">Частный сад</text>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#A8A3A0">Replace with: pinewood-garden.webp</text>
+</svg>

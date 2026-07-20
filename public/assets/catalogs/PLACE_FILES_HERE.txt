@@ -1,0 +1,8 @@
+This file is here so the folder is tracked by git. Place the portfolio catalog PDF here.
+
+Files expected:
+- private-gardens-catalog.pdf  → Catalog of private gardens (downloadable from the form section)
+
+Notes:
+- Referenced by the "Каталог частных садов" download button.
+- The link in src/app/team/page.tsx currently points to /assets/catalogs/private-gardens-catalog.pdf (update the path name there if you use a different filename).

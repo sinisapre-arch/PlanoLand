@@ -1,0 +1,7 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Терраса на холме — private garden placeholder">
+  <rect width="800" height="600" fill="#E8E4E1"/>
+  <path d="M150 250 L650 320 M180 300 L680 360 M210 350 L680 400" stroke="#B9B3B3" stroke-width="1.5"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#6C6B6B">Терраса на холме</text>
+  <text x="400" y="498" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9A9595">Частный сад</text>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#A8A3A0">Replace with: terrace-hill.webp</text>
+</svg>

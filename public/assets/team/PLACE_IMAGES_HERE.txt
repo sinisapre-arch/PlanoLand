@@ -1,0 +1,10 @@
+This file is here so the folder is tracked by git. Place images for team members here.
+
+Files expected:
+- valery-fedotov.webp  → Photo of Валерий Федотов (vertical, 4:5 aspect ratio recommended)
+- petr-lari.webp       → Photo of Пётр Лари (vertical, 4:5 aspect ratio recommended)
+
+Notes:
+- Use WebP format for best performance.
+- Recommended dimensions: 800×1000 (or higher, up to 1200×1500).
+- Light/grey background to match the site palette (#EBE8E6).

@@ -1,0 +1,9 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder for Валерий Федотов">
+  <rect width="400" height="500" fill="#EBE8E6"/>
+  <text x="200" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#6C6B6B">Валерий Федотов</text>
+  <text x="200" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#999">Placeholder Image</text>
+  <text x="200" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#999">Replace with: valery-fedotov.webp</text>
+  <rect x="150" y="150" width="100" height="100" stroke="#B9B3B3" stroke-width="2" fill="none" rx="50"/>
+  <line x1="170" y1="190" x2="230" y2="190" stroke="#B9B3B3" stroke-width="1.5"/>
+  <circle cx="200" cy="210" r="15" stroke="#B9B3B3" stroke-width="1.5" fill="none"/>
+</svg>

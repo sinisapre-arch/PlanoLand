@@ -1,0 +1,14 @@
+This file is here so the folder is tracked by git. Place UI icons here.
+
+Files already present:
+- logo.svg              → PlanoLand logo (SVG)
+- icon-download.svg     → Download icon for catalog button
+- noise-texture.svg     → Subtle noise texture overlay
+
+Optional additional icons you may add later:
+- icon-arrow-right.svg
+- icon-triangle-down.svg
+- favicon.svg
+- favicon.ico
+- apple-touch-icon.png
+- site.webmanifest

@@ -1,0 +1,9 @@
+This file is here so the folder is tracked by git. Place the hero background image here.
+
+Files expected:
+- team-hero.webp  → Hero background image for the team page
+
+Notes:
+- Use WebP format.
+- Recommended dimensions: 1200×800.
+- Should be a landscape/garden photo or abstract texture matching the brand.

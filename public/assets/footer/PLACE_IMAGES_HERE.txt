@@ -1,0 +1,8 @@
+This file is here so the folder is tracked by git. Place footer background/decoration images here.
+
+Files expected:
+- bg-footer.webp  → Decorative background image for the footer section
+
+Notes:
+- Use WebP format.
+- Should be a subtle landscape/garden image with low opacity.

@@ -1,0 +1,7 @@
+This file is here so the folder is tracked by git. Place service-related images here.
+
+Each service (e.g., plot-planning) can have its own subfolder with:
+- 1.webp, 2.webp, ... (horizontal, 16:10 aspect ratio)
+
+A placeholder file is already present:
+- service-placeholder.webp

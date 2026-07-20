@@ -1,0 +1,10 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Studio founders placeholder">
+  <rect width="1000" height="700" fill="#EBE8E6"/>
+  <rect x="200" y="120" width="240" height="460" rx="6" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <circle cx="320" cy="230" r="42" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <path d="M250 460 Q320 360 390 460" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <rect x="560" y="120" width="240" height="460" rx="6" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <circle cx="680" cy="230" r="42" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <path d="M610 460 Q680 360 750 460" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <text x="500" y="640" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#9A9595">Replace with: studio-founders.webp</text>
+</svg>

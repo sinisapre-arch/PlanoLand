@@ -1,0 +1,12 @@
+This file is here so the folder is tracked by git. Place portfolio project images here.
+
+/private-gardens/   → Images for private garden projects
+/public-spaces/     → Images for public space projects
+
+Each project folder (e.g., /private-gardens/my-garden/) should contain:
+- 1.webp, 2.webp, ... (horizontal, 16:10 aspect ratio, 1600×1000 recommended)
+- Optional: /vertical/ subfolder with 1.webp, 2.webp, ... (vertical, 4:5 aspect ratio)
+
+Placeholder files already present:
+- private-gardens/garden-placeholder.webp
+- public-spaces/space-placeholder.webp

@@ -1,0 +1,8 @@
+This file is here so the folder is tracked by git. Place blog post cover images here.
+
+Files expected:
+- post-slug.webp  → Cover image for blog post with matching slug
+
+Notes:
+- Use WebP format.
+- Recommended dimensions: 800×600 (4:3 aspect ratio).

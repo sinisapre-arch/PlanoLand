@@ -1,0 +1,8 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Усадьба Хрустальное — private garden placeholder">
+  <rect width="800" height="600" fill="#E8E4E1"/>
+  <path d="M250 380 L400 220 L550 380 Z" stroke="#B9B3B3" stroke-width="2" fill="none"/>
+  <rect x="340" y="320" width="120" height="60" stroke="#B9B3B3" stroke-width="1.5" fill="none"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#6C6B6B">Усадьба Хрустальное</text>
+  <text x="400" y="478" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#9A9595">Частный сад</text>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#A8A3A0">Replace with: crystal-estate.webp</text>
+</svg>
