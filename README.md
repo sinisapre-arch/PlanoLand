@@ -1,6 +1,5 @@
 # PlanoLand — Team Page
 
-Exact replica of the [L.BURO team page](https://lburo.ru/op/team/) layout, structure, typography, and styling — built with Next.js 16, Tailwind v4, and TypeScript.
 
 ## Quick start
 
